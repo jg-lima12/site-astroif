@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    min-height: 100%;
+    background-color:black;
+}
+
+
+/* parte do header */
+header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    border-bottom: 3px solid white;
+    font-family: 'Michroma';
+}
+
+header .containerHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    height: 16vh;
+}
+
+.containerHeader .logoNav{
+    height: 100%;
+}
+
+.containerHeader .logoNav a img{
+    display: flex;
+    height: 100%;
+}
+
+header nav ul{
+    display: flex;
+    gap: 5vh;
+
+
+}
+
+header nav ul li{
+    font-weight: 100;
+    position: relative;
+    padding-bottom: 7px;
+    list-style-type: none;
+    
+}
+
+
+.opcoesNav::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) ;
+    background-color: rgb(255, 217, 0);
+    /* border: 5px solid white; */
+    width: 0%;
+    height: 1px;
+    transition: width 0.3s ease-out;
+}
+
+.opcoesNav:hover::after{
+    width: 100%;
+} 
+
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 2.2vh;
+}
+
+.ferramentasNav{
+    display: flex;
+    gap: 15px;
+    font-size: 2.8vh;
+    color: white;
+    background:none;
+}
+
+.ferramentasNav i:hover{
+    cursor: pointer;
+}
+
+
+
+/* codigo da secao apresentação */
+#secaoApresentacao{
+    border: 1px solid red;
+    width: 100%;
+    height: 660px;
+    background-image: url(../img/bc-secaoApresenracao.jpg);
+    background-position: top;
+    background-size: cover;
+    position: relative;
+}
+
+#secaoApresentacao::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(to bottom,transparent,transparent,rgb(0, 0, 0));
+}
