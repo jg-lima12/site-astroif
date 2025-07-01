@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 *{
@@ -20,7 +21,7 @@ header{
     justify-content: center;
     width: 100%;
     background-color: rgba(0, 0, 0, 0);
-    position: fixed;
+    position: sticky;
     z-index: 999;
     top: 0;
     left: 0;
@@ -121,9 +122,8 @@ header nav ul li a{
 }
 
 .containerApresentacao{
-    width: 75%;
+    width: 85%;
     height: 100%;
-    border: 1px solid red;
     position: absolute;
     z-index: 2;
     display: flex;
@@ -131,9 +131,117 @@ header nav ul li a{
 
 .temaApresentacao{
     color: white;
-    border: 1px solid red;
     display: flex;
     align-items:center;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
+}
+
+.corpoApresentacao{
+    display: flex;
+    flex-direction: column;
+    font-family:'Montserrat';
+    gap: 20px;
+}
+
+.corpoApresentacao h1{
+    font-size: 8vh;
+}
+
+.linhaAmarela{
+    width: 50%;
+    height: 2px;
+    background-color:rgb(255, 217, 0);
+}
+
+.corpoApresentacao h4{
+    font-size: 2.5vh;
+    font-weight: 300;
+}
+
+.corpoApresentacao button{
+    padding: 10px 8px;
+    width: 180px;
+    border: 1px solid rgb(255, 217, 0);
+    background-color: rgba(0, 0, 0, 0.342);
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    transition: transform 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+
+.corpoApresentacao button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    border: 1px solid white;
+    color: rgb(255, 217, 0);
+}
+
+
+
+/* codigo da secao da contextualização */
+#secaoContextualizacao{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerContextualizacao{
+    width: 90%;
+    height: 90%;
+    border: 1px solid red;  
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+}
+
+.containerContextualizacao h2{
+    font-size: 35px;
+    font-family: 'Michroma';
+    position: relative;
+    padding: 14px 0px 20px 0px;
+    /* border: 1px solid white; */
+}
+
+.containerContextualizacao h2::after, .containerContextualizacao h2::before{
+    content: '';
+    position: absolute;
+    width: 200px;
+}
+
+.containerContextualizacao h2::after{
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    border-bottom: 3px solid rgb(255, 217, 0);
+}
+
+.containerContextualizacao h2::before{
+    top: 0;
+    left: 50%;
+    width: 100px !important;
+    transform: translateX(-50%);
+    border-top: 3px solid rgb(255, 217, 0);
+}
+
+.containerContextualizacao article{
+    height: 70%;
+    width: 100%;
+   
+}
+
+.corpoContextualizacao{
+    width: 100%;
+    height: 100%;
+    border: 1px solid red;
 }
