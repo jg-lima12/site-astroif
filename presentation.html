@@ -13,8 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
-<!-- <body onload="aparecer()"> -->
+<body onload="aparecer()">
     <main>
         <header>
             <div class="containerHeader">
@@ -54,43 +55,88 @@
                 <h2>PROJETOS REALIZADOS</h2>
                 <article>
                     <div class="corpoContextualizacao">
-                        <div class="cardContextualizacao" id="cardContextualizao1">
-                            <div class="dadosContextualizacao">
-                                <h4>Lorem ipsum</h4>
-                                <span>01/01/2008</span>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="cardContextualizacao" id="cardContextualizao1">
+                                        <div class="dadosContextualizacao">
+                                            <h4>Lorem ipsum</h4>
+                                            <span>01/01/2008</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cardContextualizacao" id="cardContextualizao2">
+                                        <div class="dadosContextualizacao">
+                                            <h4>Lorem ipsum</h4>
+                                            <span>01/01/2008</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cardContextualizacao" id="cardContextualizao3">
+                                        <div class="dadosContextualizacao">
+                                            <h4>Lorem ipsum</h4>
+                                            <span>01/01/2008</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cardContextualizacao" id="cardContextualizao4">
+                                        <div class="dadosContextualizacao">
+                                            <h4>Lorem ipsum</h4>
+                                            <span>01/01/2008</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="cardContextualizacao" id="cardContextualizao5">
+                                        <div class="dadosContextualizacao">
+                                            <h4>Lorem ipsum</h4>
+                                            <span>01/01/2008</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                               
+                                
+                                
                             </div>
-                        </div>
-                        <div class="cardContextualizacao" id="cardContextualizao2">
-                            <div class="dadosContextualizacao">
-                                <h4>Lorem ipsum</h4>
-                                <span>01/01/2008</span>
-                            </div>
-                        </div>
-                        <div class="cardContextualizacao" id="cardContextualizao3">
-                            <div class="dadosContextualizacao">
-                                <h4>Lorem ipsum</h4>
-                                <span>01/01/2008</span>
-                            </div>
-                        </div>
-                        <div class="cardContextualizacao" id="cardContextualizao4">
-                            <div class="dadosContextualizacao">
-                                <h4>Lorem ipsum</h4>
-                                <span>01/01/2008</span>
-                            </div>
-                        </div>
-                        <div class="cardContextualizacao" id="cardContextualizao5">
-                            <div class="dadosContextualizacao">
-                                <h4>Lorem ipsum</h4>
-                                <span>01/01/2008</span>
-                            </div>
-                        </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>     
                     </div>
                 </article>
             </div>
         </section>
+
+
+                    
     </main>
 
     
     <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+
+var swiper = new Swiper(".swiper", {
+    
+    slidesPerView:3,
+    spaceBetween:70,
+    navigation:{
+        nextEl:".swiper-button-next",
+        prevEl:".swiper-button-prev",
+    },
+    pagination:{
+        el:".swiper-pagination",
+        clickable: true,
+    }
+
+
+})
+
+    </script>
 </body>
 </html>

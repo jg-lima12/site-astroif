@@ -2,6 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+
+:root{
+    --borda:1px solid red;
+}
+
+
+
+/* gerais */
 *{
     padding: 0;
     margin: 0;
@@ -64,6 +72,8 @@ header nav ul li{
     position: relative;
     padding-bottom: 7px;
     list-style-type: none;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
     
 }
 
@@ -83,12 +93,17 @@ header nav ul li{
 
 .opcoesNav:hover::after{
     width: 100%;
-} 
+}
+
+.opcoesNav:active{
+    background-color: rgba(155, 155, 155, 0.418);
+}
 
 header nav ul li a{
     color: white;
     text-decoration: none;
     font-size: 12px;
+    padding: 0 10px;
 }
 
 .ferramentasNav{
@@ -240,18 +255,16 @@ header nav ul li a{
 .containerContextualizacao article{
     height: 70%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    border: var(--borda);
    
 }
 
 .corpoContextualizacao{
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    flex-wrap: wrap;
-    align-content: center;
+    border: var(--borda);
+    width: 85%;
+    height: 350px;
 }
 
 .cardContextualizacao{
@@ -267,6 +280,7 @@ header nav ul li a{
     position: relative;
     border-radius: 25px;
     transition: transform 0.3s ease;
+    border: var(--borda);
 }
 
 .cardContextualizacao::before{
@@ -276,7 +290,7 @@ header nav ul li a{
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.144),rgba(0, 0, 0, 0.281));
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.144),rgba(0, 0, 0, 0.836));
     z-index: 1;
     border-radius: 25px;
     transition: background-color 0.3s ease;
@@ -319,7 +333,7 @@ header nav ul li a{
 
 .cardContextualizacao:hover::before{
     background-image: none;
-    background-color: rgba(128, 128, 128, 0.349);
+    background-color: rgba(128, 128, 128, 0.342);
 }
 
 .dadosContextualizacao{
@@ -328,4 +342,40 @@ header nav ul li a{
     z-index: 2;
     flex-direction: column;
 
+}
+
+
+/* carrosel */
+
+.swiper{
+    border: var(--borda);
+    height: 100%;
+}
+
+.swiper-wrapper{
+    border: var(--borda);
+}
+
+.swiper-slide{
+    height: fit-content;
+    width: fit-content;
+    border: var(--borda);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide div{
+    color: white;
+}
+
+.swiper-pagination{
+    border: var(--borda);
+}
+
+.swiper-button-prev{
+    border: var(--borda);
+}
+.swiper-button-next{
+    border: var(--borda);
 }
