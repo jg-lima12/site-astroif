@@ -354,6 +354,7 @@ header nav ul li a{
 
 .swiper-wrapper{
     border: var(--borda);
+    height: fit-content;
 }
 
 .swiper-slide{
@@ -373,9 +374,11 @@ header nav ul li a{
     border: var(--borda);
 }
 
-.swiper-button-prev{
-    border: var(--borda);
+.swiper-button-prev, .swiper-button-next{
+    color: white !important;
+    font-weight: 999;
+    background-color: rgba(128, 128, 128, 0.356);
+    border-radius: 10px;
+
 }
-.swiper-button-next{
-    border: var(--borda);
-}
+ 
